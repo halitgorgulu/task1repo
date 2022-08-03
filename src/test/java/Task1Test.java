@@ -1,28 +1,37 @@
+import org.junit.Assert;
 import org.junit.Test;
 
 public class Task1Test {
-    @Test
+
+    @Test //1 layer test
     public void testTreeWithStars() {
-
-        Task1.treeWithStars("1");
+        Assert.assertEquals("*",Task1.treeWithStars("1"));
     }
 
-    @Test
+
+    @Test //2 layer test
     public void testTreeWithStars2() {
-
-        Task1.treeWithStars("3");
+        Assert.assertEquals(" *\n***",Task1.treeWithStars("2"));
     }
 
-    @Test
+    @Test //string input test
     public void testTreeWithStars3() {
-
-        Task1.treeWithStars("1");
+        Assert.assertEquals("That's wrong input!!",Task1.treeWithStars("a"));
     }
 
-    @Test
+    @Test //q test
     public void testTreeWithStars4() {
+        Assert.assertEquals("Program terminating..",Task1.treeWithStars("q"));
+    }
 
-        Task1.treeWithStars("8");
+    @Test //quit test
+    public void testTreeWithStars5() {
+        Assert.assertEquals("Program terminating..",Task1.treeWithStars("quit"));
+    }
+
+    @Test //negative integer test
+    public void testTreeWithStars6() {
+        Assert.assertEquals("That's wrong input!!",Task1.treeWithStars("-1"));
     }
 }
 
