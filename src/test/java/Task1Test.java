@@ -2,16 +2,15 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class Task1Test {
-
     @Test //1 layer test
     public void testTreeWithStars() {
-        Assert.assertEquals("*",Task1.treeWithStars("1"));
+        Assert.assertEquals("*\n",Task1.treeWithStars("1"));
     }
 
 
     @Test //2 layer test
     public void testTreeWithStars2() {
-        Assert.assertEquals(" *\n***",Task1.treeWithStars("2"));
+        Assert.assertEquals(" *\n***\n",Task1.treeWithStars("2"));
     }
 
     @Test //string input test
